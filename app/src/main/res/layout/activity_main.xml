@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.giousa.obtainipclient.MainActivity">
+
+    <Button
+        android:id="@+id/btn_obtainip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="接收IP"/>
+
+    <Button
+        android:text="停止接收"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_obtainip"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btn_stop"/>
+
+    <TextView
+        android:text="请求IP次数：0"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_stop"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_count"/>
+
+    <TextView
+        android:text="获取IP："
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_stop"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/tv_ip"/>
+</RelativeLayout>
