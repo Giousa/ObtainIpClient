@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private static int period = 3000;  //重复执行2s
     private static final int HOST_IP = 110;
     private int mSendCount=0;
+    private String mConfigServerIP;
 
     private Handler mHandler = new Handler(){
 
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     achieveHostIP();
                     mSendCount++;
                     mIpCount.setText("请求IP次数："+mSendCount);
+                    mHostIP.setText("获取IP："+mConfigServerIP);
                     break;
                 default:
                     break;
@@ -107,9 +109,8 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     if(sbuf != null){
-                        String mConfigServerIP = sbuf.toString();
+                        mConfigServerIP = sbuf.toString();
                         Log.d(TAG,"收到广播: "+mConfigServerIP);
-                        mHostIP.setText("获取IP："+mConfigServerIP);
                     }
 
                 } catch (SocketException e) {
